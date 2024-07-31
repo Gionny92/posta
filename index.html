@@ -23,9 +23,9 @@
             border-radius: 8px; /* Aggiunto un bordo arrotondato per estetica */
         }
         .left-panel {
-             flex: 1;
-    background: url('https://i.imgur.com/4sUpyrz.jpg') no-repeat center center;
-    background-size: cover;
+            flex: 1;
+            background: url('https://i.imgur.com/4sUpyrz.jpg') no-repeat center center;
+            background-size: cover;
         }
         .form-container {
             flex: 1;
@@ -53,7 +53,21 @@
             font-size: 16px;
             color: #333;
         }
-        
+
+        /* Aggiunte per responsività su dispositivi mobili */
+        @media (max-width: 600px) {
+            .left-panel {
+                background-size: cover; /* Adatta l'immagine alla dimensione del pannello */
+                height: 150px; /* Altezza fissa per il pannello con l'immagine */
+            }
+            .container {
+                flex-direction: column; /* Impila i componenti verticalmente */
+            }
+            .form-container {
+                width: 90%; /* Aumenta la larghezza per migliorare la leggibilità */
+                padding: 20px; /* Più spazio intorno agli elementi del form */
+            }
+        }
     </style>
 </head>
 <body>
@@ -110,6 +124,3 @@
     </script>
 </body>
 </html>
-
-
-
